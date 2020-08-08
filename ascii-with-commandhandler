@@ -6,7 +6,7 @@ module.exports = {
   description: "Ascii command",
   
   async run(client, message, args, prefixes){
-    if(!args[0]) return message.channel.send("");
+    if(!args[0]) return message.channel.send("Please specify a text!");
 
         msg = args.join(" ");
 
