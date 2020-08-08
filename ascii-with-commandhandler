@@ -15,7 +15,7 @@ module.exports = {
                 console.log('Something went wrong');
                 console.dir(err);
             }
-    if(data.length > 2000) return message.channel.send("")
+    if(data.length > 2000) return message.channel.send("Please make shure, your text was under 2000 symbols!")
 
     message.channel.send('```' + data + '```')
     })
