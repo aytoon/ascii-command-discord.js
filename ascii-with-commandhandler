@@ -1,0 +1,23 @@
+const discord = require('discord.js');
+const figlet = require('figlet');
+
+module.exports = {
+  name: "ascii",
+  description: "Ascii command",
+  
+  async run(client, message, args, prefixes){
+    if(!args[0]) return message.channel.send("");
+
+        msg = args.join(" ");
+
+        figlet.text(msg, function (err, data){
+            if(err){
+                console.log('Something went wrong');
+                console.dir(err);
+            }
+    if(data.length > 2000) return message.channel.send("")
+
+    message.channel.send('```' + data + '```')
+    })
+  }
+}
